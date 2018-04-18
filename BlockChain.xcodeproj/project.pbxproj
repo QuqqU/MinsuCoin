@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		670347982085D49F00903F6E /* DataSHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670347972085D49F00903F6E /* DataSHA256.swift */; };
+		6703479A2085D50E00903F6E /* BlockChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670347992085D50E00903F6E /* BlockChain.swift */; };
 		67291A952085C6FD00F347CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67291A942085C6FD00F347CA /* AppDelegate.swift */; };
 		67291A972085C6FD00F347CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67291A962085C6FD00F347CA /* ViewController.swift */; };
 		67291A9A2085C6FD00F347CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67291A982085C6FD00F347CA /* Main.storyboard */; };
 		67291A9C2085C70000F347CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67291A9B2085C70000F347CA /* Assets.xcassets */; };
 		67291A9F2085C70000F347CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67291A9D2085C70000F347CA /* LaunchScreen.storyboard */; };
+		67291AA72085C71500F347CA /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67291AA62085C71500F347CA /* Block.swift */; };
+		67291AA92085CA1300F347CA /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67291AA82085CA1300F347CA /* Transaction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		670347962085D1A300903F6E /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		670347972085D49F00903F6E /* DataSHA256.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSHA256.swift; sourceTree = "<group>"; };
+		670347992085D50E00903F6E /* BlockChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockChain.swift; sourceTree = "<group>"; };
 		67291A912085C6FD00F347CA /* BlockChain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockChain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67291A942085C6FD00F347CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67291A962085C6FD00F347CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,8 @@
 		67291A9B2085C70000F347CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67291A9E2085C70000F347CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67291AA02085C70000F347CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67291AA62085C71500F347CA /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		67291AA82085CA1300F347CA /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +63,13 @@
 		67291A932085C6FD00F347CA /* BlockChain */ = {
 			isa = PBXGroup;
 			children = (
+				670347962085D1A300903F6E /* BridgingHeader.h */,
 				67291A942085C6FD00F347CA /* AppDelegate.swift */,
 				67291A962085C6FD00F347CA /* ViewController.swift */,
+				67291AA62085C71500F347CA /* Block.swift */,
+				670347992085D50E00903F6E /* BlockChain.swift */,
+				670347972085D49F00903F6E /* DataSHA256.swift */,
+				67291AA82085CA1300F347CA /* Transaction.swift */,
 				67291A982085C6FD00F347CA /* Main.storyboard */,
 				67291A9B2085C70000F347CA /* Assets.xcassets */,
 				67291A9D2085C70000F347CA /* LaunchScreen.storyboard */,
@@ -135,8 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67291AA72085C71500F347CA /* Block.swift in Sources */,
 				67291A972085C6FD00F347CA /* ViewController.swift in Sources */,
+				670347982085D49F00903F6E /* DataSHA256.swift in Sources */,
+				67291AA92085CA1300F347CA /* Transaction.swift in Sources */,
 				67291A952085C6FD00F347CA /* AppDelegate.swift in Sources */,
+				6703479A2085D50E00903F6E /* BlockChain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +307,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = JKU.BlockChain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = BlockChain/BridgingHeader.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -307,6 +326,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = JKU.BlockChain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = BlockChain/BridgingHeader.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

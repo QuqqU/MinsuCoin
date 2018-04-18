@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+
+struct Block : Codable {
+    let index: Int // order of block
+    let timeStamp: Double//
+    let transactions: [Transaction]
+    let previousBlockHash: Data
+    var nounce: Int // mining
+    var difficultyOfProblem: Int
+
+    func hash() -> Data {
+        let encoder = JSONEncoder()
+        let jsonData = try! encoder.encode(self)
+        return jsonData.sha256()
+    }
+}
+
+
